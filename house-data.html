@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <title>House Data</title>
+</head>
+
+<body>
+
+    <!--primera parte de la página con icono y mail-->
+    <div class="container" id="app">
+
+        <div class="row">
+            <div class="col-10">
+                <img src="fotos/tgif.jpg" alt="" height="180px" width="60%">
+            </div>
+            <div class="col-2">
+                <img src="fotos/usCongress2.jpg" alt="" height="180px" width="100%">
+            </div>
+
+        </div>
+
+
+
+        <!--navegación de la página-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+            <div class="container menu rounded">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="home-page.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Congress 113
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="senate-data.html">Senate</a>
+                                <a class="dropdown-item" href="house-data.html">House</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Attendance
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="senate-attendance.html">Senate</a>
+                                <a class="dropdown-item" href="house-attendance.html">House</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Party Loyalty
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="senate-party-loyalty.html">Senate</a>
+                                <a class="dropdown-item" href="house-party-loyalty.html">House</a>
+
+                            </div>
+
+                        </li>
+                    </ul>
+                    <a href="https://bootstrapemail.com" class="badge badge-light">Contact Us</a>
+
+                </div>
+            </div>
+        </nav>
+
+        <!--contenido-->
+
+        <div class="row">
+            <div class="col col-md-9">
+                <h2>Congressmen</h2>
+                <p>The major power of the House is to pass federal legislation that affects the entire country, although its bills must also be passed by the Senate and further agreed to by the U.S. President before becoming law (unless both the House and Senate re-pass the legislation with a two-thirds majority in each chamber). The House has some exclusive powers: the power to initiate revenue bills, to impeach officials (impeached officials are subsequently tried in the Senate), and to elect the U.S. President in case there is no majority in the Electoral College.</p>
+                <p>Each U.S. state is represented in the House in proportion to its population as measured in the census, but every state is entitled to at least one representative. </p>
+            </div>
+        </div>
+        <div>
+            <div class="row">
+                <div class="col-9">
+                    <p>Filter by Party:
+                        <label class="checkbox-inline"><input type="checkbox" name="party" value="R" onclick="filtrarParty()" checked> Republicans</label>
+                        <label class="checkbox-inline"> <input type="checkbox" name="party" value="D" onclick="filtrarParty()" checked> Democrats</label>
+                        <label class="checkbox-inline"><input type="checkbox" name="party" value="I" onclick="filtrarParty()" checked> Independent</label>
+                    </p>
+                </div>
+                <div class="col-3">
+                    <p>Filter By State:
+
+
+
+                        <select id="state" onchange="filtrarParty()">
+                            <option value="All" selected>All</option>
+
+                            <option value="TN">TN</option>
+                            <option value="NH">NH</option>
+                            <option value="WI">WI</option>
+                            <option value="WY">WY</option>
+                            <option value="MT">AK</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="MO">MO</option>
+                            <option value="NJ">NJ</option>
+                            <option value="AR">AR</option>
+                            <option value="CA">CA</option>
+                            <option value="OH">OH</option>
+                            <option value="NC">NC</option>
+                            <option value="WA">WA</option>
+                            <option value="MD">MD</option>
+                            <option value="DE">DE</option>
+                            <option value="PA">PA</option>
+                            <option value="GA">GA</option>
+                            <option value="IN">IN</option>
+                            <option value="OK">OK</option>
+                            <option value="MS">MS</option>
+                            <option value="ME">ME</option>
+                            <option value="TX">TX</option>
+                            <option value="Il">IL</option>
+                            <option value="NE">NE</option>
+                            <option value="AZ">AZ</option>
+                            <option value="MN">MN</option>
+                            <option value="NY">NY</option>
+                            <option value="SC">Sc</option>
+                            <option value="NA">NA</option>
+                            <option value="IA">IA</option>
+                            <option value="UT">UT</option>
+                            <option value="NM">NM</option>
+                            <option value="ND">ND</option>
+                            <option value="HI">HI</option>
+                            <option value="OK">OK</option>
+                            <option value="GA">GA</option>
+                            <option value="VT">VT</option>
+
+
+
+                        </select>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+        <!--tabla-->
+        <div class="row">
+            <div class="col">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Full Name</th>
+                            <th>Party</th>
+                            <th>State</th>
+                            <th>Seniority</th>
+                            <th>Votes %</th>
+                        </tr>
+                    </thead>
+
+
+                    <tbody id="house-data">
+                        <tr v-for="member in senators">
+                            <td>{{member.first_name}} {{member.middle_name}} {{member.last_name}}</td>
+                            <td>{{member.party}}</td>
+                            <td>{{member.state}}</td>
+                            <td>{{member.seniority}}</td>
+                            <td>{{member.votes_with_party_pct }}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <!--footer-->
+
+        <div class="row">
+            <div class="col rounded menu">
+                <p>2019 TGIF | All Rights Reserved</p>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+    <!--    <script src="pro-congress-113-house.js"></script>-->
+    <script src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
